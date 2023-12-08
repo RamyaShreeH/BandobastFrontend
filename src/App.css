@@ -168,6 +168,12 @@ header {
   text-align: left;
 }
 
+/* label{
+  color: red;
+}
+input{
+  color: royalblue;
+} */
 .dInput{
   display:flex;
   flex-wrap: wrap;
@@ -183,6 +189,7 @@ header {
   /* padding: 6px; */
   /* font-weight: bold; */
   color: #070707;
+  
   width: 30ch;
 }
 
@@ -191,6 +198,10 @@ header {
   background-color: #FFFFFF;
   width: 100%;
   border-radius: 2px;
+}
+
+.validation-error-message {
+  color: red;
 }
 
 
