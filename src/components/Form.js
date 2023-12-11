@@ -18,6 +18,11 @@ const Form = () => (
         if(!values.password){
             errors.password = "Password required"
         }
+        else if (
+            (values.password.length < 8)
+          ) {
+            errors.password = 'Minimum of 8 chars required';
+          }
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -40,7 +45,7 @@ const Form = () => (
         <form onSubmit={handleSubmit}>
             <div className = "dInput">
                 <div>
-                    <label>Email:</label>
+                    <label>Email<span className='mandatory'>*</span></label>
                     <input
                         type="email"
                         name="email"
@@ -55,7 +60,7 @@ const Form = () => (
                     {/* {errors.email && touched.email && errors.email} */}
                 </div>
                 <div>
-                    <label>Password</label>
+                    <label>Password<span className='mandatory'>*</span></label>
                     <input
                         type="password"
                         name="password"

@@ -200,7 +200,7 @@ input{
   border-radius: 2px;
 }
 
-.validation-error-message {
+.mandatory{
   color: red;
 }
 
